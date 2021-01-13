@@ -46,6 +46,7 @@ public class UnityChanController : MonoBehaviour
 
     //ジャンプボタン押下の判定
     private bool isJButtonDown = false;
+    
 
     void Start()
     {
@@ -63,6 +64,8 @@ public class UnityChanController : MonoBehaviour
 
         //シーン中のscoreTextオブジェクトを取得
         this.scoreText = GameObject.Find("ScoreText");
+
+        
     }
 
     void Update()

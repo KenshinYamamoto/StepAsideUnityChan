@@ -25,17 +25,16 @@ public class ItemGenerator : MonoBehaviour
 
     void Start()
     {
-
         //一定の距離ごとにアイテムを生成
-        for (int i = startPos;i < goalPos;i += 15)
+        for (int i = startPos; i < goalPos; i += 15)
         {
             //どのアイテムを出すのかをランダムに設定
             int num = Random.Range(1, 11);
 
-            if(num <= 2)
+            if (num <= 2)
             {
                 //コーンをx軸方向に一直線に生成
-                for(float j = -1;j <= 1;j += 0.4f)
+                for (float j = -1; j <= 1; j += 0.4f)
                 {
                     GameObject cone = Instantiate(conePrefab);
                     cone.transform.position = new Vector3(4 * j, cone.transform.position.y, i);
@@ -44,7 +43,7 @@ public class ItemGenerator : MonoBehaviour
             else
             {
                 //レーンごとにアイテムを生成
-                for(int j = -1;j <= 1; j++)
+                for (int j = -1; j <= 1; j++)
                 {
                     //アイテムの種類を決める
                     int item = Random.Range(1, 11);
